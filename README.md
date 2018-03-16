@@ -1,0 +1,7 @@
+## Lab 3 - Basket Ball App 
+The application should dynamically display the scores at any given time for the teams during the game. 
+Provide 3 button to (one for 3 points, one for 2 points and one for 1 point).
+Finally include a RESET button to initialize the scores of both the teams at the end of the game
+
+## Lab 3 - Quiz
+Design and implement a simple quiz on an Android device
