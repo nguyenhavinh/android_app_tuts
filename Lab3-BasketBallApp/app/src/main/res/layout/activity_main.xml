@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.lab3_basketballapp.MainActivity">
+    <Button
+        android:id="@+id/bt_A_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 Points"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="69dp"
+        android:layout_alignBaseline="@+id/bt_A_2"
+        android:layout_alignBottom="@+id/bt_A_2"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/bt_A_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 Points"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="69dp"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/tv_teamA_name"
+        android:layout_toEndOf="@+id/bt_A_3" />
+
+    <Button
+        android:id="@+id/bt_A_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 Point"
+        tools:layout_editor_absoluteX="188dp"
+        tools:layout_editor_absoluteY="69dp"
+        android:layout_alignBaseline="@+id/bt_A_2"
+        android:layout_alignBottom="@+id/bt_A_2"
+        android:layout_toEndOf="@+id/bt_A_2" />
+
+    <TextView
+        android:id="@+id/tv_teamA_name"
+        android:textSize="32sp"
+        android:layout_width="224dp"
+        android:layout_height="42dp"
+        android:text="Team A"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="19dp" />
+
+    <TextView
+        android:id="@+id/tv_teamA_score"
+        android:textSize="32sp"
+        android:layout_width="95dp"
+        android:layout_height="46dp"
+        android:text="TOTAL POINT"
+        tools:layout_editor_absoluteY="69dp"
+        tools:layout_editor_absoluteX="284dp"
+        android:layout_alignTop="@+id/bt_A_3"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
