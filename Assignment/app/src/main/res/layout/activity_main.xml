@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vinhnguyen.assignment.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_login_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Instructor Login/Register"
+        android:textSize="28sp"
+        android:textAlignment="center">
+    </TextView>
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name:"
+        android:textSize="20sp"
+        android:layout_below="@+id/tv_login_register"
+        android:layout_marginTop="20dp">
+    </TextView>
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:textSize="20sp"
+        android:layout_below="@+id/tv_username"
+        android:layout_marginTop="30dp">
+    </TextView>
+    <EditText
+        android:id="@+id/ed_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_login_register"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="120dp">
+    </EditText>
+    <EditText
+        android:id="@+id/ed_password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_username"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="120dp">
+
+    </EditText>
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_password"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="100dp"
+        android:onClick="register"
+        android:text="REGISTER">
+    </Button>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_password"
+        android:layout_marginTop="30dp"
+        android:layout_alignStart="@id/btn_register"
+        android:layout_marginLeft="100dp"
+        android:onClick="login"
+        android:text="LOGIN">
+    </Button>
+</RelativeLayout>

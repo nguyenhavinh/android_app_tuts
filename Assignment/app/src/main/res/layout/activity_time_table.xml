@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vinhnguyen.assignment.TimeTable">
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cwt_logo"/>
+    <TextView
+        android:id="@+id/tv_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        android:layout_below="@id/img_logo"
+        android:layout_marginTop="5dp">
+    </TextView>
+    <TextView
+        android:id="@+id/tv_white_yellow_belts_name"
+        android:layout_below="@+id/tv_hello"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#cccccc"
+        android:text="WHITE AND YELLOW BELTS"
+        android:textStyle="bold"
+        android:textAlignment="center">
+    </TextView>
+    <TextView
+        android:id="@+id/tv_white_yellow_belts_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_white_yellow_belts_name"
+        android:layout_marginTop="5dp"
+        android:text="Saturday 12th December 2015"
+        android:textAlignment="center">
+    </TextView>
+    <RelativeLayout
+        android:id="@+id/lay_white_belt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_white_yellow_belts_time"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/tv_white_belt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="White Belt"
+            android:layout_marginLeft="50dp"/>
+        <TextView
+            android:id="@+id/tv_white_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8:00am - 8:45am"
+            android:layout_marginLeft="200dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/lay_yellow_belt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_white_belt"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/tv_yellow_belt1_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yellow Belt 1 Stripe"
+            android:layout_marginLeft="50dp"/>
+        <TextView
+            android:id="@+id/tv_yellow_belt1_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8:45am - 9:30am"
+            android:layout_marginLeft="200dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/lay_yellow_belt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_yellow_belt1"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/tv_yellow_belt2_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yellow Belt 2 Stripe"
+            android:layout_marginLeft="50dp"/>
+        <TextView
+            android:id="@+id/tv_yellow_belt2_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9:30am - 10:30am"
+            android:layout_marginLeft="200dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/lay_yellow_belt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_yellow_belt2"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/tv_yellow_belt3_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yellow Belt 3 Stripe"
+            android:layout_marginLeft="50dp"/>
+        <TextView
+            android:id="@+id/tv_yellow_belt3_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:30am - 12:00noon"
+            android:layout_marginLeft="200dp"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_blue_belts_name"
+        android:layout_below="@+id/lay_yellow_belt3"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#cccccc"
+        android:text="BLUE BELTS"
+        android:textStyle="bold"
+        android:textAlignment="center">
+    </TextView>
+    <TextView
+        android:id="@+id/tv_blue_belts_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_blue_belts_name"
+        android:layout_marginTop="5dp"
+        android:text="Sunday 13th December 2015"
+        android:textAlignment="center">
+    </TextView>
+    <RelativeLayout
+        android:id="@+id/lay_blue_belt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_blue_belts_time"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/tv_blue_belt1_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue Belt 1 Stripes"
+            android:layout_marginLeft="50dp"/>
+        <TextView
+            android:id="@+id/tv_blue_belt1_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8:00am - 9:30am"
+            android:layout_marginLeft="200dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/lay_blue_belt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_blue_belt1"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/tv_blue_belt2_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue Belt 2 Stripes"
+            android:layout_marginLeft="50dp"/>
+        <TextView
+            android:id="@+id/tv_blue_belt2_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9:30am - 11:00am"
+            android:layout_marginLeft="200dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/lay_blue_belt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_blue_belt2"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/tv_blue_belt3_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue Belt 3 Stripes"
+            android:layout_marginLeft="50dp"/>
+        <TextView
+            android:id="@+id/tv_blue_belt3_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11:00am - 12:30am"
+            android:layout_marginLeft="200dp"/>
+    </RelativeLayout>
+</RelativeLayout>
