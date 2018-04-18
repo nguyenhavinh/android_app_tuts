@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".TimeTable" />
-        <activity android:name=".GradingList"></activity>
+        <activity android:name=".GradingList" />
+        <activity android:name=".EditStudent"></activity>
     </application>
 
 </manifest>

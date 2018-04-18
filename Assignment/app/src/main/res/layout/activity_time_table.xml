@@ -192,4 +192,22 @@
             android:text="11:00am - 12:30am"
             android:layout_marginLeft="200dp"/>
     </RelativeLayout>
+    <Button
+        android:id="@+id/btn_view_students"
+        android:text="VIEW STUDENTS"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_blue_belt3"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="viewStudents"/>
+    <Button
+        android:id="@+id/btn_edit_students"
+        android:text="EDIT/DELETE STUDENT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lay_blue_belt3"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="170dp"
+        android:onClick="editStudent"/>
 </RelativeLayout>
