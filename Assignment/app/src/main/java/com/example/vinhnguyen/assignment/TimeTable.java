@@ -113,7 +113,7 @@ public class TimeTable extends AppCompatActivity implements View.OnClickListener
             buffer.append("NAME: " + res.getString(1) + "\n");
             buffer.append("TOTAL: " + res.getString(31) + "\n");
         }
-        showMessage("Data", buffer.toString());
+        showMessage("Students Data", buffer.toString());
     }
     public void showMessage(String title, String message){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
