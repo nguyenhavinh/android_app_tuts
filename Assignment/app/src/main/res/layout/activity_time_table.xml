@@ -195,8 +195,8 @@
     <Button
         android:id="@+id/btn_view_students"
         android:text="VIEW STUDENTS"
-        android:layout_width="150sp"
-        android:layout_height="wrap_content"
+        android:layout_width="120sp"
+        android:layout_height="70sp"
         android:layout_below="@+id/lay_blue_belt3"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
@@ -204,10 +204,19 @@
     <Button
         android:id="@+id/btn_edit_students"
         android:text="EDIT/DELETE STUDENT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120sp"
+        android:layout_height="70sp"
         android:layout_below="@id/lay_blue_belt3"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="170dp"
+        android:layout_marginLeft="135dp"
         android:onClick="editStudent"/>
+    <Button
+        android:id="@+id/btn_feedback_students"
+        android:text="STUDENT FEEDBACK"
+        android:layout_width="120sp"
+        android:layout_height="70sp"
+        android:layout_below="@id/lay_blue_belt3"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="260dp"
+        android:onClick="addFeedback"/>
 </RelativeLayout>

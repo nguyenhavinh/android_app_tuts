@@ -115,6 +115,13 @@ public class TimeTable extends AppCompatActivity implements View.OnClickListener
         }
         showMessage("Students Data", buffer.toString());
     }
+    public void addFeedback(View view){
+        Intent intent = new Intent(TimeTable.this, StudentFeedback.class);
+        intent.putExtra("ExaminerId", examinerId);
+        intent.putExtra("ExaminerName", examinerName);
+        intent.putExtra("Rank", rankSelected);
+        startActivity(intent);
+    }
     public void showMessage(String title, String message){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);

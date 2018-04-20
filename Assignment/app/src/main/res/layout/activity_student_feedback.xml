@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vinhnguyen.assignment.StudentFeedback">
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cwt_logo"/>
+    <TextView
+        android:id="@+id/tv_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        android:layout_below="@id/img_logo"
+        android:layout_marginTop="5dp">
+    </TextView>
+    <TextView
+        android:id="@+id/tv_student_id_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="StudentID: "
+        android:textSize="18sp"
+        android:layout_below="@+id/tv_hello"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/ed_student_id_value"
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_hello"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="90dp"/>
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_hello"
+        android:layout_marginLeft="180dp"
+        android:text="LOAD FEEDBACK"
+        android:onClick="loadFeedback"/>
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_hello"
+        android:layout_marginLeft="280dp"
+        android:text="SAVE FEEDBACK"
+        android:onClick="saveFeedback"/>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_student_id_name"
+        android:layout_marginTop="20dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_positive_feedback_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="POSITIVE FEEDBACK"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:background="#cccccc"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/ed_positive_feedback_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_positive_feedback_name"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/tv_negative_feedback_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NEGATIVE FEEDBACK"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:background="#cccccc"
+                android:textStyle="bold"
+                android:layout_below="@+id/ed_positive_feedback_value"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:id="@+id/ed_negative_feedback_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_negative_feedback_name"
+                android:layout_marginTop="5dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

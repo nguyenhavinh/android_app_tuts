@@ -60,11 +60,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String STUDENT_TABLE_COL_33= "EXAMINER_ID";
 
 
-    //TABLE EXAMINER_STUDENT
-    public static final String TABLE_EXAMINER_STUDENT_NAME = "Examiner_student";
-    public static final String EXAMINER_STUDENT_TABLE_COL_1 = "ID";
-    public static final String EXAMINER_STUDENT_TABLE_COL_2 = "EXAMINER_ID";
-    public static final String EXAMINER_STUDENT_TABLE_COL_3 = "STUDENT_ID";
+    //TABLE FEEDBACK
+    public static final String TABLE_FEEDBACK_NAME = "Feedback";
+    public static final String FEEDBACK_TABLE_COL_1 = "ID";
+    public static final String FEEDBACK_TABLE_COL_2 = "STUDENT_ID";
+    public static final String FEEDBACK_TABLE_COL_3 = "POSITIVE";
+    public static final String FEEDBACK_TABLE_COL_4 = "NEGATIVE";
 
 
     public DatabaseHelper(Context context){
@@ -73,8 +74,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL("create table " + TABLE_FEEDBACK_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, STUDENT_ID INTEGER, POSITIVE TEXT, NEGATIVE TEXT)");
         db.execSQL("create table " + TABLE_EXAMINER_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, PASSWORD TEXT)");
-        db.execSQL("create table " + TABLE_EXAMINER_STUDENT_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, EXAMINER_ID INTEGER, STUDENT_ID INTEGER)");
         db.execSQL("create table " + TABLE_STUDENT_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, BRANCH TEXT, RANK TEXT, PHONE TEXT, GRADING_DATE TEXT, GENDER TEXT, DOB TEXT, AGE TEXT, WEIGHT TEXT, HEIGHT TEXT, MOBILE TEXT, STARTING_TIME TEXT, " +
                 "MANNER INTEGER, STANCES INTEGER, SHORT_STANCE INTEGER, PREVIOUS_STRIKES INTEGER, STRIKES INTEGER, BOXING INTEGER, PREVIOUS_BLOCK INTEGER, BLOCK INTEGER, AXE_KICK INTEGER, FRONT_KICK INTEGER, SIDE_KICK INTEGER, ROUND_KICK INTEGER, " +
                 "BASIC_FORM INTEGER, COUNT_TAEGUK INTEGER, FREE_TAEGUK INTEGER, STEP_SPARRING INTEGER, SPARRING INTEGER, YELL INTEGER, TOTAL DOUBLE, EXAMINER_ID INTEGER)");
@@ -83,8 +84,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("Drop table if exists: " + TABLE_EXAMINER_NAME);
-        db.execSQL("Drop table if exists: " + TABLE_EXAMINER_STUDENT_NAME);
         db.execSQL("Drop table if exists: " + TABLE_STUDENT_NAME);
+        db.execSQL("Drop table if exists: " + TABLE_FEEDBACK_NAME);
         onCreate(db);
     }
     public boolean insertExaminer(String name, String password){
@@ -190,5 +191,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from " + TABLE_STUDENT_NAME + " where EXAMINER_ID = ?", new String[] {examiner_id});
         return res;
+    }
+    public Cursor loadFeedback(String student_id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from " + TABLE_FEEDBACK_NAME + " where STUDENT_ID = ?", new String[] {student_id});
+        return  res;
+    }
+    public boolean updateFeedback(String student_id, String pos, String neg){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(FEEDBACK_TABLE_COL_2, student_id);
+        contentValues.put(FEEDBACK_TABLE_COL_3, pos);
+        contentValues.put(FEEDBACK_TABLE_COL_4, neg);
+        long result = db.insert(TABLE_FEEDBACK_NAME, null, contentValues);
+        if (result == -1){
+            return false;
+        }
+        else return true;
     }
 }
