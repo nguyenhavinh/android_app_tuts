@@ -9,3 +9,8 @@ Finally include a RESET button to initialize the scores of both the teams at the
 Design and implement a simple quiz on an Android device.
 
 ![image](https://user-images.githubusercontent.com/25890761/37498157-c898acc4-2910-11e8-84bc-bdba456ec975.png)
+
+## Lab 3 - AndroidActivityStateChange
+Implement a simple app to understand Android Activity Life Cycle
+
+![image](https://user-images.githubusercontent.com/25890761/38243619-744ffaf4-377b-11e8-9990-230bceb686a2.png)
