@@ -55,4 +55,4 @@ Create a Taekwondo grading app for City West Taekwondo(CWT) Trading Centre.
 ![image](https://user-images.githubusercontent.com/25890761/41650323-185360b4-74c1-11e8-8698-0023a5b9e5b8.png)
 ![image](https://user-images.githubusercontent.com/25890761/41650328-1cde202e-74c1-11e8-8c95-88fabc70e261.png)
 ![image](https://user-images.githubusercontent.com/25890761/41650498-841de2b0-74c1-11e8-9c27-f9ba9522aabb.png)
-![image](https://user-images.githubusercontent.com/25890761/41650525-96cdba16-74c1-11e8-9b54-25dbf759bd40.png)
+![image](https://user-images.githubusercontent.com/25890761/41650659-f788348a-74c1-11e8-9173-36ead13ba170.png)
